@@ -1,9 +1,11 @@
 #!/bin/bash
 
-#range le bureau
+#clean the download folder
+cd download;
 
 arg1=$(ls | grep *.jpg | wc -l);
 arg2=$(ls | grep *.mp3 | wc -l);
+arg3=$(ls | grep *.avi | wc -l);
 
 if [$arg1 -ne 0]; then
 	if [! -d /~/picture ]; then
@@ -19,4 +21,11 @@ elif [$arg2 -ne 0]; then
 		elif [ -d /~/music ]; then
 			move *.mp3 ~/music
 		fi
+	elif [$arg3 -ne 0]; then
+			if [! -d /~/movie]; then
+				mkdir movie # create a folder called movie
+				move *.avi ~/movie
+			elif [ -d /~/movie]; then
+					move *.avi ~/movie
+			fi
 fi
