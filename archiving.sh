@@ -2,6 +2,7 @@
 
 d_gzip=$(ls | grep *.gz | wc -l);
 d_bz2=$(ls | grep *.tar.bz2 | wc -l);
+d_zip=$(ls | grep *.zip | wc -l);
 
 #use:
 # -d : decompress
@@ -9,21 +10,29 @@ d_bz2=$(ls | grep *.tar.bz2 | wc -l);
 
 
 if [[ "$1" == "-d" ]]; then
+	#Use : ./archiving.sh -d FILENAME
 	
 	if [[ $d_gzip -ne 0 ]]; then
-		gunzip *.gz #decompress *.gz
+		gunzip $2 #decompress *.gz ok
 	elif [[ $d_bz2 -ne 0 ]]; then	
-		tar jxvf *.tar.bz2 # decompress *.tar.bz2
+		tar jxvf $2 # decompress *.tar.bz2 ok
+		rm $2
+	elif [[ $d_zip -ne 0 ]]; then #ok
+		unzip $2
+		rm $2
 	fi
 elif [[ "$1" == "-c" ]]; then
-	
+	#use : ./archiving.sh -c bz2 FILENAME
 	if [[ "$2" == "gzip" ]]; then
-		gzip $3
+		gzip $3 #ok
 	elif [[ "$2" == "bz2" ]]; then
-		
-		 tar jcvf $3.tar.bz2 $4
+		 tar jcvf $3.tar.bz2 $3 # $3 : file name ok
+		 rm $3
+	elif [[ "$2" == "zip" ]]; then
+		zip $3.zip $3 # $3 : file name ok
+		rm $3
 	fi
+		
 fi
-#compress = c
-#decompress
+
 
