@@ -1,0 +1,8 @@
+To creat an alias for the script
+
+In the bash_rc file, you can write :
+
+alias arch =' ~/github/computer-automate/archiving.sh'
+alias clean='~/github/computer-automate/clean.sh'
+alias info ='~/github/computer-automate/info.sh'
+alias man ='~/github/computer-automate/man.sh'
