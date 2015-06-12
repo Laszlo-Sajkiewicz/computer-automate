@@ -3,17 +3,21 @@
 #clean the download folder
 cd ~/download;
 
+
+
+if [ "$1" != "-h" ]; then
+	echo 'ok'
 #picture
-pic_1=$(ls *.jpg | wc -l);
-pic_2=$(ls *.png | wc -l);
+	pic_1=$(ls *.jpg | wc -l);
+	pic_2=$(ls *.png | wc -l);
 #music
-music_1=$(ls  *.mp3 | wc -l);
-music_2=$(ls  *.aac | wc -l);
+	music_1=$(ls  *.mp3 | wc -l);
+	music_2=$(ls  *.aac | wc -l);
 #movie
-movie_1=$(ls  *.avi | wc -l);
-movie_2=$(ls  *.wmv | wc -l);
-movie_3=$(ls  *.mp4 | wc -l);
-movie_4=$(ls  *.mov | wc -l);
+	movie_1=$(ls  *.avi | wc -l);
+	movie_2=$(ls  *.wmv | wc -l);
+	movie_3=$(ls  *.mp4 | wc -l);
+	movie_4=$(ls  *.mov | wc -l);
 
 #PICTURE
 if [ $pic_1 -ne 0 ]; then
@@ -73,6 +77,7 @@ elif [ $movie_3 -ne 0 ]; then
 			mv *.mp4 ~/movie
 		elif [ -d /~/movie ]; then
 			mv *.mp4 ~/movie
+		fi
 elif [ $movie_4 -ne 0 ]; then
 	#MOV 
 		if [ ! -d /~/movie ]; then
@@ -80,7 +85,10 @@ elif [ $movie_4 -ne 0 ]; then
 			mv *.mov ~/movie
 		elif [ -d /~/movie ]; then
 			mv *.mov ~/movie
-elif [[ "$1" == "-h" ]]; then
+		fi
+fi
+fi
+if [ "$1" == "-h" ]; then
 	 echo -e "\033[34m\033[45m USE :\033[0m "
 	 echo 'Have a file called "download"'
 	 echo 'EX : ./clean.sh'
