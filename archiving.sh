@@ -24,12 +24,17 @@ if [[ "$1" == "-d" ]]; then
 elif [[ "$1" == "-c" ]]; then
 	#use : ./archiving.sh -c bz2 FILENAME
 	if [[ "$2" == "gzip" ]]; then
+		echo 'test of' $3'.gz : ok'
 		gzip $3 #ok
+		gzip -t $3.gz
 	elif [[ "$2" == "bz2" ]]; then
-		 tar jcvf $3.tar.bz2 $3 # $3 : file name ok
-		 rm $3
+		tar jcvf $3.tar.bz2 $3 # $3 : file name ok
+		bzip2 -t $3.tar.bz2 
+		echo 'test of' $3'.tar.bz2 : ok'
+		rm $3
 	elif [[ "$2" == "zip" ]]; then
 		zip $3.zip $3 # $3 : file name ok
+		zip -T $3.zip
 		rm $3
 	fi
 elif [[ "$1" == "-h" ]]; then
