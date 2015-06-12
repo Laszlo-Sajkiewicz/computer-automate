@@ -23,6 +23,7 @@ elif [[ "$1" == "-cpu" ]]; then
 			echo 'Architecture :' $archi
 elif [ "$1" == "-h" ] || [ "$1" == "" ]; then
 		echo -e "\033[34m\033[45m USE :\033[0m "
-	 	echo '-mem : Give somme informations about the memory'
-	 	echo '-swap : Give somme informations about the swap'
+	 	echo '-mem : Give some informations about the memory'
+	 	echo '-swap : Give some informations about the swap'
+	 	echo '-cpu : Give some information about cpu'
 fi
