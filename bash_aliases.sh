@@ -8,4 +8,5 @@ alias mv='mv -i'
 alias ip='ifconfig'
 alias rm='rm -i'
 alias name='uname -a'
-
+alias ll='ls -la'
+alias rmd='rm -ri'

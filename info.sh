@@ -16,4 +16,11 @@ elif [[ "$1" == "-f" ]]; then
 	grep $2 $3 # $2 : FILENAME ; $3 : TEXT
 elif [[ "$1" == "-i" ]]; then
 	uname -a 
+elif [[ "$1" =="-h" ]]; then
+	 echo -e "\033[34m\033[45m USE :\033[0m "
+	 echo ' -n : show the number of process'
+	 echo '-lsp : show all process running'
+	 echo '-s : show the size , EX: ./info.sh -s FILE'
+	 echo '-f : searches the named input files , EX : ./info.sh -f  TEXT FILE '
+	 echo '-i :  print  all  information'
 fi

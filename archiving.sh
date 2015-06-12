@@ -32,7 +32,14 @@ elif [[ "$1" == "-c" ]]; then
 		zip $3.zip $3 # $3 : file name ok
 		rm $3
 	fi
-		
+elif [[ "$1" == "-h" ]]; then
+	 echo -e "\033[34m\033[45m USE :\033[0m "
+	 echo 'To compress : ./archiving.sh -c , -c : compress'
+	 echo './archiving.sh -c bz2|gzip|zip FILENAME'
+	 echo 'EX : ./archiving.sh -c bz2 test'
+	 echo 'To decompress : ./archiving.sh -d , -d : decompress'
+	 echo './archiving.sh -d FILENAME'
+	 echo 'EX: ./archiving.sh -d test.bz2 '
 fi
 
 

@@ -80,4 +80,8 @@ elif [ $movie_4 -ne 0 ]; then
 			mv *.mov ~/movie
 		elif [ -d /~/movie ]; then
 			mv *.mov ~/movie
+elif [[ "$1" == "-h" ]]; then
+	 echo -e "\033[34m\033[45m USE :\033[0m "
+	 echo 'Have a file called "download"'
+	 echo 'EX : ./clean.sh'
 fi
