@@ -44,62 +44,62 @@ COMMENT
 	        fi
         elif [ $pic_2 -ne 0  ]; then
 	        #PNG
-		        if [ ! -d /~/picture ]; then
-			        mkdir ~/picture 
-			        mv *.png ~/picture
-		        elif [ -d /~/picture ]; then
-			        mv *.png ~/picture
-		        fi
+	        if [ ! -d /~/picture ]; then
+		        mkdir ~/picture 
+		        mv *.png ~/picture
+	        elif [ -d /~/picture ]; then
+		        mv *.png ~/picture
+	        fi
         #MUSIC
         elif [ $music_1 -ne 0 ]; then
 	        #MP3
-		        if [ ! -d /~/music ]; then
-			        mkdir ~/music 
-			        mv *.mp3 ~/music
-		        elif [ -d /~/music ]; then
-			        mv *.mp3 ~/music
-		        fi
+	        if [ ! -d /~/music ]; then
+		        mkdir ~/music 
+		        mv *.mp3 ~/music
+	        elif [ -d /~/music ]; then
+		        mv *.mp3 ~/music
+	        fi
         elif [ $music_2 -ne 0 ]; then
 	        #AAC
-		        if [ ! -d /~/music ]; then
-			        mkdir ~/music 
-			        mv *.aac ~/music
-		        elif [ -d /~/music ]; then
-			        mv *.aac ~/music
-		        fi
+	        if [ ! -d /~/music ]; then
+		        mkdir ~/music 
+		        mv *.aac ~/music
+	        elif [ -d /~/music ]; then
+		        mv *.aac ~/music
+	        fi
         #MOVIE
         elif [ $movie_1 -ne 0 ]; then
 	        #AVI
-		        if [ ! -d /~/movie ]; then
-			        mkdir ~/movie 
-			        mv *.avi ~/movie
-		        elif [ -d /~/movie ]; then
-			        mv *.avi ~/movie
-		        fi
+	        if [ ! -d /~/movie ]; then
+		        mkdir ~/movie 
+		        mv *.avi ~/movie
+	        elif [ -d /~/movie ]; then
+		        mv *.avi ~/movie
+	        fi
         elif [ $movie_2 -ne 0 ]; then
 	        #WMV
-		        if [ ! -d /~/movie ]; then
-			        mkdir ~/movie 
-			        mv *.wmv ~/movie
-		        elif [ -d /~/movie ]; then
-			        mv *.wmv ~/movie
-		        fi
+	        if [ ! -d /~/movie ]; then
+		        mkdir ~/movie 
+		        mv *.wmv ~/movie
+	        elif [ -d /~/movie ]; then
+		        mv *.wmv ~/movie
+	        fi
         elif [ $movie_3 -ne 0 ]; then
 	        #MP4
-		        if [ ! -d /~/movie ]; then
-			        mkdir ~/movie 
-			        mv *.mp4 ~/movie
-		        elif [ -d /~/movie ]; then
-			        mv *.mp4 ~/movie
-		        fi
+            if [ ! -d /~/movie ]; then
+	            mkdir ~/movie 
+	            mv *.mp4 ~/movie
+            elif [ -d /~/movie ]; then
+	            mv *.mp4 ~/movie
+            fi
         elif [ $movie_4 -ne 0 ]; then
 	        #MOV 
-		        if [ ! -d /~/movie ]; then
-			        mkdir ~/movie 
-			        mv *.mov ~/movie
-		        elif [ -d /~/movie ]; then
-			        mv *.mov ~/movie
-		        fi
+	        if [ ! -d /~/movie ]; then
+		        mkdir ~/movie 
+		        mv *.mov ~/movie
+	        elif [ -d /~/movie ]; then
+		        mv *.mov ~/movie
+	        fi
         fi
 <<COMMENT
     If the user doesn't have download folder
