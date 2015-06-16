@@ -24,7 +24,7 @@ if [ "$1" == "" ]; then
 	    movie_2=$(ls  *.wmv | wc -l);
 	    movie_3=$(ls  *.mp4 | wc -l);
 	    movie_4=$(ls  *.mov | wc -l);
-
+	    movie_5=$(ls  *.mkv | wc -l);
         #PICTURE
         if [ $pic_1 -ne 0 ]; then
 	        #JPG
@@ -91,6 +91,14 @@ if [ "$1" == "" ]; then
 		        mv *.mov ~/movie
 	        elif [ -d /~/movie ]; then
 		        mv *.mov ~/movie
+	        fi
+	 elif [ $movie_5 -ne 0 ]; then
+	        #MKV 
+	        if [ ! -d /~/movie ]; then
+		        mkdir ~/movie 
+		        mv *.mkv ~/movie
+	        elif [ -d /~/movie ]; then
+		        mv *.mkv ~/movie
 	        fi
         fi
 
