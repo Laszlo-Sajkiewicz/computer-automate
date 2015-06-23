@@ -10,7 +10,9 @@ if [ "$1" != "-h" ]; then
 #Doctor Who
 	DW_1=$(ls *Doctor*Who* | wc -l);
 	DW_2=$(ls *doctor*who* | wc -l);
-
+# Le transporteur
+	lt_1=$(ls *Le*Transporteur* | wc -l);
+	lt_2=$(ls *Transporter* | wc -l);
 #Star wars
 if [ $st_1 -ne 0 ]; then
 	if [ ! -d /~/movies/Star_Wars ]; then
@@ -22,9 +24,9 @@ if [ $st_1 -ne 0 ]; then
 elif [ $st_2 -ne 0  ]; then
 	if [ ! -d /~/movies/Star_Wars ]; then
 		mkdir ~/movies/Star_Wars 
-		mv *Star*Wars* ~/movies/Star_Wars
+		mv *Star*Wars*.* ~/movies/Star_Wars
 	elif [ -d /~/movies/Star_Wars ]; then
-		mv *Star*Wars* ~/movies/Star_Wars
+		mv *Star*Wars*.* ~/movies/Star_Wars
 	fi
 #Doctor_Who
 elif [ $DW_1 -ne 0 ]; then
@@ -43,10 +45,26 @@ elif [ $DW_2 -ne 0 ]; then
 		elif [ -d /~/music ]; then
 			mv *doctor*who ~/movies/Doctor_Who
 		fi
+if [ $lt_1 -ne 0 ]; then
+	if [ ! -d /~/movies/Le_transporteur ]; then
+		mkdir ~/movies/Le_transporteur 
+		mv *Le*Transporteur* ~/movies/Le_transporteur
+	elif [ -d /~/movies/Le_transporteur ]; then
+		mv *Le*Transporteur* ~/movies/Le_transporteur
+	fi
+elif [ $lt_2 -ne 0  ]; then
+	if [ ! -d /~/movies/Le_transporteur ]; then
+		mkdir ~/movies/Le_transporteur 
+		mv *Transporter* ~/movies/Le_transporteur
+	elif [ -d /~/movies/Le_transporteur ]; then
+		mv *Transporter* ~/movies/Le_transporteur
+	fi
+fi
 
 fi
 if [ "$1" == "-h" ]; then
 	 echo -e "\033[34m\033[45m USE :\033[0m "
 	 echo 'Have a file called "movies"'
 	 echo 'EX : ./cl_movies.sh'
+fi
 fi
