@@ -1,38 +1,30 @@
 #!/bin/bash
 
-<<COMMENT
-    This simple shell script can be used for cleaning you download folder.
-    It will move your pictures, music or movies into the correct folder.
-COMMENT
+#   This simple shell script can be used for cleaning you download folder.
+#   It will move your pictures, music or movies into the correct folder.
 
-<<COMMENT
-    If the user doesn't give any parameter
-COMMENT
+#   If the user doesn't give any parameter
+
 if [ "$1" == "" ]; then
 
-<<COMMENT
-    If the user have the download directory
-COMMENT
+#   If the user have the download directory
     if [ -d /~/download ]; then
         cd ~/download
-<<COMMENT
-    We count the number of images for each type of image
-COMMENT
+
+#   We count the number of images for each type of image
     	pic_1=$(ls *.jpg | wc -l);
     	pic_2=$(ls *.png | wc -l);
-<<COMMENT
-    We count the number of music for each type of music
-COMMENT
+
+#   We count the number of music for each type of music
     	music_1=$(ls  *.mp3 | wc -l);
     	music_2=$(ls  *.aac | wc -l);
-<<COMMENT
-    We count the number of movies for each type of movie
-COMMENT
+
+#   We count the number of movies for each type of movie
 	    movie_1=$(ls  *.avi | wc -l);
 	    movie_2=$(ls  *.wmv | wc -l);
 	    movie_3=$(ls  *.mp4 | wc -l);
 	    movie_4=$(ls  *.mov | wc -l);
-
+	    movie_5=$(ls  *.mkv | wc -l);
         #PICTURE
         if [ $pic_1 -ne 0 ]; then
 	        #JPG
@@ -100,16 +92,23 @@ COMMENT
 	        elif [ -d /~/movie ]; then
 		        mv *.mov ~/movie
 	        fi
+	 elif [ $movie_5 -ne 0 ]; then
+	        #MKV 
+	        if [ ! -d /~/movie ]; then
+		        mkdir ~/movie 
+		        mv *.mkv ~/movie
+	        elif [ -d /~/movie ]; then
+		        mv *.mkv ~/movie
+	        fi
         fi
-<<COMMENT
-    If the user doesn't have download folder
-COMMENT
+
+#   If the user doesn't have download folder
     else
         echo "You don't have ~/download folder";
     fi
-<<COMMENT
-    If the user give the parameter -h 
-COMMENT
+
+#   If the user give the parameter -h 
+
 elif [ "$1" == "-h" ]; then
      echo -e "\033[34m\033[45m USE :\033[0m "
      echo 'Have a file called "download"'
