@@ -10,9 +10,7 @@ if [ "$1" != "-h" ]; then
 #Doctor Who
 	DW_1=$(ls *Doctor*Who* | wc -l);
 	DW_2=$(ls *doctor*who* | wc -l);
-# Le transporteur
-	lt_1=$(ls *Le*Transporteur* | wc -l);
-	lt_2=$(ls *Transporter* | wc -l);
+
 #Star wars
 if [ $st_1 -ne 0 ]; then
 	if [ ! -d /~/movies/Star_Wars ]; then
@@ -45,21 +43,7 @@ elif [ $DW_2 -ne 0 ]; then
 		elif [ -d /~/music ]; then
 			mv *doctor*who ~/movies/Doctor_Who
 		fi
-if [ $lt_1 -ne 0 ]; then
-	if [ ! -d /~/movies/Le_transporteur ]; then
-		mkdir ~/movies/Le_transporteur 
-		mv *Le*Transporteur* ~/movies/Le_transporteur
-	elif [ -d /~/movies/Le_transporteur ]; then
-		mv *Le*Transporteur* ~/movies/Le_transporteur
-	fi
-elif [ $lt_2 -ne 0  ]; then
-	if [ ! -d /~/movies/Le_transporteur ]; then
-		mkdir ~/movies/Le_transporteur 
-		mv *Transporter* ~/movies/Le_transporteur
-	elif [ -d /~/movies/Le_transporteur ]; then
-		mv *Transporter* ~/movies/Le_transporteur
-	fi
-fi
+
 
 fi
 if [ "$1" == "-h" ]; then
