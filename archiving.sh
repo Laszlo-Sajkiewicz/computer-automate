@@ -16,7 +16,7 @@ case ${option} in
 	    elif [[ $d_bz2 -ne 0 ]]; then	
 		    tar jxvf $2 
 		    rm $2
-	    elif [[ $d_zip -ne 0 ]]; then #ok
+	    elif [[ $d_zip -ne 0 ]]; then 
 		    unzip $2
 		    rm $2
 	    fi
@@ -31,7 +31,7 @@ case ${option} in
 		    echo 'test of' $3'.tar.bz2 : ok'
 		    rm $3
 	    elif [[ "$2" == "zip" ]]; then
-		    zip $3.zip $3 # $3 : file name ok
+		    zip $3.zip $3 
 		    zip -T $3.zip
 		    rm $3
 	    fi
