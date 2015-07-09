@@ -12,9 +12,9 @@ option="${1}";
 
 case ${option} in
     -d) if [[ $d_gzip -ne 0 ]]; then
-		    gunzip $2 #decompress *.gz ok
+		    gunzip $2 
 	    elif [[ $d_bz2 -ne 0 ]]; then	
-		    tar jxvf $2 # decompress *.tar.bz2 ok
+		    tar jxvf $2 
 		    rm $2
 	    elif [[ $d_zip -ne 0 ]]; then #ok
 		    unzip $2
@@ -26,7 +26,7 @@ case ${option} in
 		    gzip -t $3.gz
 		    echo 'test of' $3'.gz : ok'
 	    elif [[ "$2" == "bz2" ]]; then
-		    tar jcvf $3.tar.bz2 $3 # $3 : file name ok
+		    tar jcvf $3.tar.bz2 $3 
 		    bzip2 -t $3.tar.bz2 
 		    echo 'test of' $3'.tar.bz2 : ok'
 		    rm $3
