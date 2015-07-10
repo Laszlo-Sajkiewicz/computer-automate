@@ -19,5 +19,10 @@ alias psfu='ps -f -u'
 alias h='history'
 #github
 alias gs="git status" 
-alias gc="git commit"
+alias gm='git commit -m'
 alias gp='git push'
+alias ga='git add'
+alias gpu='git pull'
+alias gcl='git clone'
+alias gpo='git push origin -u'
+alias gme='git merge'
