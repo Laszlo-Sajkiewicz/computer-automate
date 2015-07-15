@@ -1,6 +1,7 @@
 #!/usr/bin/python
-# -*-coding:encodage -*
-import os
+ # -*-coding:Latin-1 -*
+import os 
+import shutil
 
  # We count the number of images for each type of image
 pic_1=os.popen("ls *.jpg | wc -l", "r").read()
@@ -20,6 +21,6 @@ movie_5=os.popen("ls *.mkv | wc -l","r").read()
 def image():
   if pic_1 >0 :
    if os.path.isdir('pictures'):
-    os.mkdir('pictures')
+     os.mkdir('pictures')
      #shutil.copyfile(src, dst):
-     shutil.move(~/download/*.jpg", "~/pictures/*.jpg")
+     shutil.move("~/download/*.jpg", "~/pictures/*.jpg")
