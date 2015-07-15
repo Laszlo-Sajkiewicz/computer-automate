@@ -20,7 +20,8 @@ movie_5=os.popen("ls *.mkv | wc -l","r").read()
 
 def image():
   if pic_1 >0 :
-   if os.path.isdir('pictures'):
+   if not os.path.exists('pictures'):
      os.mkdir('pictures')
-     #shutil.copyfile(src, dst):
+     shutil.move("~/download/*.jpg", "~/pictures/*.jpg")
+   elif os.path.exists('pictures'):
      shutil.move("~/download/*.jpg", "~/pictures/*.jpg")
