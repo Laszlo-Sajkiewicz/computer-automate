@@ -26,3 +26,7 @@ alias gpu='git pull'
 alias gcl='git clone'
 alias gpo='git push origin -u'
 alias gme='git merge'
+#my alias
+alias cl='~/script/clean.sh'
+alias arch='~/scrip/archiving.sh'
+alias info='~/script/info.sh'
