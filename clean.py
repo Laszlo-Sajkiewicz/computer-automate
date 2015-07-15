@@ -16,3 +16,9 @@ movie_2=os.popen("ls *.wmv | wc -l","r").read()
 movie_3=os.popen("ls *.mp4 | wc -l","r").read()
 movie_4=os.popen("ls *.mov | wc -l","r").read()
 movie_5=os.popen("ls *.mkv | wc -l","r").read()
+
+def image():
+  if pic_1 >0 :
+   if os.path.isdir('pictures'):
+    os.mkdir('pictures')
+     #shutil.copyfile(src, dst):
