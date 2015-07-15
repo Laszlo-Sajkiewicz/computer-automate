@@ -32,3 +32,17 @@ def image_pic_2():
      shutil.move("~/download/*.png", "~/pictures/*.png")
    elif os.path.exists('pictures'):
      shutil.move("~/download/*.png", "~/pictures/*.png")
+def fmusic_1():
+ if music_1 >0 :
+  if not os.path.exists('music'):
+   os.mkdir('music')
+   shutil.move("~/download/*.mp3", "~/music/*.mp3")
+  elif os.path.exits('music') :
+   shutil.move("~/download/*.mp3", "~/music/*.mp3")
+def fmusic_2():
+  if music_2 >0 :
+   if not os.path.exists('music'):
+    os.mkdir('music')
+    shutil.move("~/download/*.aac", "~/music/*.aac")
+   elif os.path.exits('music') :
+    shutil.move("~/download/*.aac", "~/music/*.aac")
