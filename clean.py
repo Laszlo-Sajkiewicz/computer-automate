@@ -18,10 +18,17 @@ movie_3=os.popen("ls *.mp4 | wc -l","r").read()
 movie_4=os.popen("ls *.mov | wc -l","r").read()
 movie_5=os.popen("ls *.mkv | wc -l","r").read()
 
-def image():
+def image_pic_1():
   if pic_1 >0 :
    if not os.path.exists('pictures'):
      os.mkdir('pictures')
      shutil.move("~/download/*.jpg", "~/pictures/*.jpg")
    elif os.path.exists('pictures'):
      shutil.move("~/download/*.jpg", "~/pictures/*.jpg")
+def image_pic_2():
+  if pic_2 >0 :
+    if not os.path.exists('pictures'):
+     os.mkdir('pictures')
+     shutil.move("~/download/*.png", "~/pictures/*.png")
+   elif os.path.exists('pictures'):
+     shutil.move("~/download/*.png", "~/pictures/*.png")
