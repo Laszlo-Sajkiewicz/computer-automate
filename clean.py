@@ -22,3 +22,4 @@ def image():
    if os.path.isdir('pictures'):
     os.mkdir('pictures')
      #shutil.copyfile(src, dst):
+     shutil.move(~/download/*.jpg", "~/pictures/*.jpg")
