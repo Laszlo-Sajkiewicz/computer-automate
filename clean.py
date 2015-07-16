@@ -46,3 +46,10 @@ def fmusic_2():
     shutil.move("~/download/*.aac", "~/music/*.aac")
    elif os.path.exits('music') :
     shutil.move("~/download/*.aac", "~/music/*.aac")
+def fmovie_1():
+  if music_2 >0 :
+   if not os.path.exists('music'):
+    os.mkdir('music')
+    shutil.move("~/download/*.aac", "~/music/*.aac")
+   elif os.path.exits('music') :
+    shutil.move("~/download/*.aac", "~/music/*.aac)"
