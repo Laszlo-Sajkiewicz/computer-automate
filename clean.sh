@@ -31,7 +31,7 @@ if [ "$1" == "" ]; then
 	        if [ ! -d /~/picture ]; then
 		        mkdir ~/picture 
 		        mv *.jpg ~/picture
-	        elif [ -d /~/picture ]; then
+	        elif [ -d /~/picture ]; then 
 		        mv *.jpg ~/picture
 	        fi
         elif [ $pic_2 -ne 0  ]; then
