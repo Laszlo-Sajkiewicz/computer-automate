@@ -60,4 +60,11 @@ def fmovie_2():
     shutil.move("~/download/*.wmv", "~/movie/*.wmv")
    elif os.path.exits('music') :
     shutil.move("~/download/*.wmv", "~/movie/*.wmv)"
+def fmovie_3():
+  if movie_3 >0 :
+   if not os.path.exists('movie'):
+    os.mkdir('movie')
+    shutil.move("~/download/*.mp4", "~/movie/*.mp4")
+   elif os.path.exits('music') :
+    shutil.move("~/download/*.mp4", "~/movie/*.mp4)"
  
