@@ -12,7 +12,7 @@ music_1=os.popen("ls *.mp3 | wc -l","r").read()
 music_2=os.popen("ls *.aac | wc -l","r").read()
 
 # We count the number of movies for each type of movie
-movie_1=os.popen("ls *.avi | wc -l","r").read()
+movie_1=os.popen("ls *.avi | wc -l","r").read() 
 movie_2=os.popen("ls *.wmv | wc -l","r").read()
 movie_3=os.popen("ls *.mp4 | wc -l","r").read()
 movie_4=os.popen("ls *.mov | wc -l","r").read()
