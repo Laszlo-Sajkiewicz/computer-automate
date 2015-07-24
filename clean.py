@@ -17,7 +17,7 @@ movie_2=os.popen("ls *.wmv | wc -l","r").read()
 movie_3=os.popen("ls *.mp4 | wc -l","r").read()
 movie_4=os.popen("ls *.mov | wc -l","r").read()
 movie_5=os.popen("ls *.mkv | wc -l","r").read()
-
+#functions
 def image_pic_1():
   if pic_1 >0 :
    if not os.path.exists('pictures'):
@@ -81,4 +81,16 @@ def fmovie_5():
       shutil.move("~/download/*.mkv", "~/movie/*.mkv")
     elif os.path.exits('music') :
       shutil.move("~/download/*.mkv", "~/movie/*.mkv)"
- 
+ #main
+ #pic
+image_pic_1();
+image_pic_2();
+#music
+music_1();
+music_2();
+#movie
+fmovie_1():
+fmovie_2():
+fmovie_3():
+fmovie_4():
+fmovie_5(:)
