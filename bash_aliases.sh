@@ -17,6 +17,7 @@ alias ps1='echo $PS1'
 alias ll='ls -la'
 alias psfu='ps -f -u'
 alias h='history'
+alias ..='cd ..'
 #github
 alias gs="git status" 
 alias gm='git commit -m'
